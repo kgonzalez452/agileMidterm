@@ -14,24 +14,26 @@ console.log(transformFirstAndLast(arr));
 
 //CHALLENGE 2
 
-let obj =
+let keys =
 {
     name : 'Sam',
     age : 25,
     hasPets : true
 }
 
-function getAllKeys(obj) {
+function getAllKeys(keys) {
     // return array of all keys
     // return Object.keys(obj);
     
-    // let array = [];
-    // for (let i = 0; i < obj.length - 1; i++ ) {
-    //     array.push(obj[i]);
-    // };
-    // return array;
+    let arr = [];
+    for (let k in keys) {
+        arr.push(k);
+        console.log(k);
+    };
+    console.log(arr);
+    return arr;
   }
-  console.log(getAllKeys(obj));
+  console.log(getAllKeys(keys));
  
 //   {
 //     name : 'Sam',
@@ -51,6 +53,8 @@ function getElementsGreaterThan10AtProperty(obj, key) {
 
 
 // CHALLENGE 4
+// How would you use a closure to create a private counter? You will need to return more than one function. At least two. One to add to the counter, and another to retrieve the value. You will need to research how to return more than one function from a function.
+
 
 
 
