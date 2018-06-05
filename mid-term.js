@@ -18,7 +18,9 @@ let keys =
 {
     name : 'Sam',
     age : 25,
-    hasPets : true
+    hasPets : true,
+    lastName: 'Johnson',
+    favoriteColor: 'yellow'
 }
 
 function getAllKeys(keys) {
@@ -26,11 +28,12 @@ function getAllKeys(keys) {
     // return Object.keys(obj);
     
     let arr = [];
+    // loop through an object using a for in loop
     for (let k in keys) {
         arr.push(k);
-        console.log(k);
+        // console.log(k);
     };
-    console.log(arr);
+    // console.log(arr);
     return arr;
   }
   console.log(getAllKeys(keys));
@@ -49,7 +52,14 @@ var obj = {
 
 function getElementsGreaterThan10AtProperty(obj, key) {
     // your code here
-  }
+    let arr = [];
+    for (let k = 0; k >= 10; k++){
+        arr.push(k);
+        console.log(k);
+
+    }
+}
+console.log(getElementsGreaterThan10AtProperty(obj, key));
 
 
 // CHALLENGE 4
@@ -60,3 +70,30 @@ function getElementsGreaterThan10AtProperty(obj, key) {
 
 
 // CHALLENGE 5
+
+//What is the result of running this code? Explain your answer.
+
+var fullname = 'John Doe';               // fullname
+
+var obj = {                              // obj
+
+   fullname: 'Colin Ihrig',              // obj.fullname
+
+    prop: {                              // obj.prop
+
+        fullname: 'Aurelio De Rosa',     // obj.prop.fullname
+
+        getFullname: function() {        // obj.prop.getFullname()
+           return this.fullname;
+        }
+    }
+};
+
+console.log(obj.prop.getFullname());
+// i know that that 'Aurelio De Rosa' shows up because its just a key that is in an object within another object so 
+
+var test = obj.prop.getFullname;
+
+console.log(test());
+console.log(fullname);
+
